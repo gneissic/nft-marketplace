@@ -100,7 +100,6 @@ s_listings[nftAddress][tokenId].price  = newPrice;
 emit itemListed(msg.sender, nftAddress, tokenId, newPrice);
 
 }
-
 function withdrawProceeds() external {
     uint256 proceeds  = s_proceeds[msg.sender];
     if(proceeds < 0){

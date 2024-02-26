@@ -1,3 +1,8 @@
+const { network } = require("hardhat")
+
+
+
+
 
 module.exports = (async({deployments, getNamedAccounts})=>{
   const {deploy, log} = deployments
@@ -5,7 +10,10 @@ module.exports = (async({deployments, getNamedAccounts})=>{
 
   const arguments  = []
 
-  await deploy("BasicNft", {from:deployer, log:true, args:arguments, waitConfirmations:1})
-
+  const basicNft =  await deploy("BasicNft", {from:deployer, log:true, args:arguments, waitConfirmations:1})
+ 
 })
+
+
+
 module.exports.tags = ["all", "basicnft"]
